@@ -68,13 +68,13 @@ install_asdf() {
 
             6)
                 echo "Instalando plugin de PHP..."
-                sudo dnf install -y autoconf bison re2c libcurl libcurl-devel gd-devel gcc-c++ oniguruma oniguruma-devel postgresql-devel libzip-devel
+                sudo dnf install -y autoconf bison re2c libcurl libcurl-devel gd-devel gcc-c++ oniguruma oniguruma-devel postgresql-devel libzip-devel sqlite-devel readline-devel
                 asdf plugin add php https://github.com/asdf-community/asdf-php.git
                 asdf install php 8.2.8
                 ;;
             7)
                 echo "Instalando plugin de PHP..."
-                sudo dnf install -y autoconf bison re2c libcurl libcurl-devel gd-devel gcc-c++ oniguruma oniguruma-devel postgresql-devel libzip-devel
+                sudo dnf install -y autoconf bison re2c libcurl libcurl-devel gd-devel gcc-c++ oniguruma oniguruma-devel postgresql-devel libzip-devel sqlite-devel readline-devel
                 asdf plugin add php https://github.com/asdf-community/asdf-php.git
                 asdf install php 7.4.30
                 ;;
