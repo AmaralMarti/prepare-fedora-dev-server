@@ -10,5 +10,5 @@ git clone https://github.com/AmaralMarti/prepare-fedora-dev-server.git
 cd prepare-fedora-dev-server
 
 # Torna o script executável e executa-o
-chmod +x prepare-ubuntu-dev-server.sh
-./prepare-ubuntu-dev-server.sh
+chmod +x prepare-fedora-dev-server.sh
+./prepare-fedora-dev-server.sh
