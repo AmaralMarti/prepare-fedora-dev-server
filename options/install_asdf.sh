@@ -54,41 +54,25 @@ install_asdf() {
                 asdf install nodejs 14.21.3
                 ;;                        
             4)
-                echo "Instalando plugin de Python..."
-                
-                sudo apt update -y
-                sudo apt install -y build-essential libssl-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev curl libncursesw5-dev xz-utils tk-dev libxml2-dev libxmlsec1-dev libffi-dev liblzma-dev
-
-                asdf plugin add python https://github.com/danhper/asdf-python.git
-                
+                echo "Instalando plugin de Python..."                
+                sudo dnf install gcc make patch zlib-devel bzip2 bzip2-devel readline-devel sqlite sqlite-devel openssl-devel tk-devel libffi-devel xz-devel
+                asdf plugin add python https://github.com/danhper/asdf-python.git                
                 asdf install python 3.11.4
                 ;;
             5)
-                echo "Instalando plugin de Python..."
-                
-                sudo apt update -y
-                sudo apt install -y build-essential libssl-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev curl libncursesw5-dev xz-utils tk-dev libxml2-dev libxmlsec1-dev libffi-dev liblzma-dev
-
-                asdf plugin add python https://github.com/danhper/asdf-python.git
-            
+                echo "Instalando plugin de Python..."                
+                sudo dnf install gcc make patch zlib-devel bzip2 bzip2-devel readline-devel sqlite sqlite-devel openssl-devel tk-devel libffi-devel xz-devel
+                asdf plugin add python https://github.com/danhper/asdf-python.git            
                 asdf install python 2.7.18
                 ;;
 
             6)
                 echo "Instalando plugin de PHP..."
-
-                sudo apt update -y
-                sudo apt install -y autoconf bison build-essential curl gettext git libgd-dev libcurl4-openssl-dev libedit-dev libicu-dev libjpeg-dev libmysqlclient-dev libonig-dev libpng-dev libpq-dev libreadline-dev libsqlite3-dev libssl-dev libxml2-dev libzip-dev openssl pkg-config re2c zlib1g-dev
-
                 asdf plugin add php https://github.com/asdf-community/asdf-php.git
                 asdf install php 8.2.8
                 ;;
             7)
                 echo "Instalando plugin de PHP..."
-
-                sudo apt update -y
-                sudo apt install -y libssl-dev autoconf bison build-essential curl gettext git libgd-dev libcurl4-openssl-dev libedit-dev libicu-dev libjpeg-dev libmysqlclient-dev libonig-dev libpng-dev libpq-dev libreadline-dev libsqlite3-dev libssl-dev libxml2-dev libzip-dev openssl pkg-config re2c zlib1g-dev
-
                 asdf plugin add php https://github.com/asdf-community/asdf-php.git
                 asdf install php 7.4.30
                 ;;
