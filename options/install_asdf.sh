@@ -25,7 +25,6 @@ install_asdf() {
     4 "Python - 3.11.4" on \
     5 "Python - 2.7.18" on \
     6 "PHP - 8.2.8" on \
-    7 "PHP - 7.4.30" on \
     )
 
     # Verifica se o usuário pressionou Esc ou Cancelar
@@ -55,13 +54,13 @@ install_asdf() {
                 ;;                        
             4)
                 echo "Instalando plugin de Python..."                
-                sudo dnf install gcc make patch zlib-devel bzip2 bzip2-devel readline-devel sqlite sqlite-devel openssl-devel tk-devel libffi-devel xz-devel
+                sudo dnf install -y gcc make patch zlib-devel bzip2 bzip2-devel readline-devel sqlite sqlite-devel openssl-devel tk-devel libffi-devel xz-devel
                 asdf plugin add python https://github.com/danhper/asdf-python.git                
                 asdf install python 3.11.4
                 ;;
             5)
                 echo "Instalando plugin de Python..."                
-                sudo dnf install gcc make patch zlib-devel bzip2 bzip2-devel readline-devel sqlite sqlite-devel openssl-devel tk-devel libffi-devel xz-devel
+                sudo dnf install -y gcc make patch zlib-devel bzip2 bzip2-devel readline-devel sqlite sqlite-devel openssl-devel tk-devel libffi-devel xz-devel
                 asdf plugin add python https://github.com/danhper/asdf-python.git            
                 asdf install python 2.7.18
                 ;;
@@ -71,12 +70,6 @@ install_asdf() {
                 sudo dnf install -y autoconf bison re2c libcurl libcurl-devel gd-devel gcc-c++ oniguruma oniguruma-devel postgresql-devel libzip-devel sqlite-devel readline-devel
                 asdf plugin add php https://github.com/asdf-community/asdf-php.git
                 asdf install php 8.2.8
-                ;;
-            7)
-                echo "Instalando plugin de PHP..."
-                sudo dnf install -y autoconf bison re2c libcurl libcurl-devel gd-devel gcc-c++ oniguruma oniguruma-devel postgresql-devel libzip-devel sqlite-devel readline-devel
-                asdf plugin add php https://github.com/asdf-community/asdf-php.git
-                asdf install php 7.4.30
                 ;;
         esac
     done
